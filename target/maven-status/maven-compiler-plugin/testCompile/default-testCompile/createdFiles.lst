@@ -1,0 +1,6 @@
+steps\MyStepdefs.class
+pom\HomePage.class
+runners\TestRunner.class
+master\BaseTest.class
+master\CucumberHooks.class
+master\MasterSteps.class
