@@ -53,6 +53,7 @@ public class MyStepdefs extends MasterSteps {
     @When("User see the search text box")
     public void userSeeTheSearchTextBox() {
         Assert.assertTrue(page.amazonTextBox.isDisplayed());
+        Reporter.log("tested" , true);
     }
 
     @Then("User enter {string}")
@@ -86,8 +87,5 @@ public class MyStepdefs extends MasterSteps {
                 .filter(optionText -> optionText.contains("17")) // filter by substring
                 .collect(Collectors.toList());
               text.forEach(System.out::println);
-
-
-
     }
 }
