@@ -86,8 +86,5 @@ public class MyStepdefs extends MasterSteps {
                 .filter(optionText -> optionText.contains("17")) // filter by substring
                 .collect(Collectors.toList());
               text.forEach(System.out::println);
-
-
-
     }
 }

@@ -13,7 +13,6 @@ Feature: Facebook feature
       Given User hits the amazon url
        When User see the search text box
       Then User enter "Iphone"
-      #And click on search button
       And get all the options shown in the suggestions
 
   @Amazon1 @Regression
@@ -21,3 +20,10 @@ Feature: Facebook feature
     Given User hits the amazon url
     When User see the search text box
     Then User enter "Key ="
+
+  @Amazon1 @Regression
+  Scenario: Go to amazon and search for Iphone
+    Given User hits the amazon url
+    When User see the search text box
+    Then User enter "Iphone"
+    And click on search button
