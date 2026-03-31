@@ -21,7 +21,7 @@ Feature: Facebook feature
     When User see the search text box
     Then User enter "Key ="
 
-  @Amazon1 @Regression
+  @Amazon @Regression
   Scenario: Go to amazon and search for Iphone
     Given User hits the amazon url
     When User see the search text box
