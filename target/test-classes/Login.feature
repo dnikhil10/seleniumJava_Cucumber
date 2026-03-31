@@ -1,7 +1,7 @@
 Feature: Facebook feature
 
 
-  @facebook @Regression
+  @facebook @sanity
   Scenario: Login into facebook
     Given User is hits the facebook url
     When user is on facebook login page
@@ -27,3 +27,8 @@ Feature: Facebook feature
     When User see the search text box
     Then User enter "Iphone"
     And click on search button
+
+    @BookMyShow @Regression
+      Scenario: Go to Bookmy show
+      Given User hits the BookMyShow url
+      Then User is displayed with list of categories
