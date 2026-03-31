@@ -26,4 +26,6 @@ public class HomePage
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement amazonSearchIcon;
 
+    @FindBy (xpath = "//a[contains(@class,'sc-1or3vea-8 fdbMVZ')]")
+    public WebElement bookMyShowIcon;
 }

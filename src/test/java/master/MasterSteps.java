@@ -33,4 +33,19 @@ public class MasterSteps
 
    }
 
+   public boolean waitUntilDisplayed(WebElement ele , long sec)
+   {
+       try {
+           WebDriverWait wait = new WebDriverWait(BaseTest.getDriver(), Duration.ofSeconds(sec));
+           wait.until(ExpectedConditions.visibilityOf(ele));
+           return true;
+       }
+       catch (Exception e)
+       {
+           e.printStackTrace();
+           return false;
+       }
+
+   }
+
 }

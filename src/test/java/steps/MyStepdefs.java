@@ -88,4 +88,32 @@ public class MyStepdefs extends MasterSteps {
                 .collect(Collectors.toList());
               text.forEach(System.out::println);
     }
+
+    @Given("User hits the BookMyShow url")
+    public void userHitsTheBookMyShowUrl() {
+        BaseTest.getDriver().navigate().to("https://in.bookmyshow.com/explore/home/bengaluru");
+        page= new HomePage(BaseTest.getDriver());
+        waitFor(10000);
+       // Assert.assertTrue(waitUntilDisplayed(page.bookMyShowIcon, 05));
+      //  page.bookMyShowIcon.isDisplayed();
+        Reporter.log("Icon Displayed" , true);
+
+    }
+
+    @Then("User is displayed with list of categories")
+    public void userIsDisplayedWithListOfCategories() {
+
+        List<WebElement> options=BaseTest.getDriver().findElements(By.xpath("//div[contains(@class,'sc-1or3vea-19 cTQGyV')]/child::a"));
+
+        List<String> texts = options.stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+
+        for (String text:texts)
+        {
+            Reporter.log(text , true);
+        }
+
+
+    }
 }

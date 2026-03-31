@@ -9,7 +9,7 @@ import java.awt.*;
 @CucumberOptions (features = "src/test/resources/Login.feature",
         glue = {"steps" , "master"},
         monochrome = true,
-        tags= "@Regression",
+        tags= "@BookMyShow",
         dryRun = false,
         plugin = {"pretty" , "html:target/cucumber-report.html", "json:target/cucumber.json"})
 
